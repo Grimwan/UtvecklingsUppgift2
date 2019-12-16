@@ -14,7 +14,7 @@ namespace UtvecklingsUppgift2
             DataHanteringsLager lager = new DataHanteringsLager();         
             foreach (var tävling in lager.GetAllTävlingar())
             {
-                Console.WriteLine("Tävlings Namn: " + tävling.Namn);
+                Console.WriteLine("Tävlings namn: " + tävling.Namn);
                 Console.WriteLine("Deltagarna i tävlingen");
 
                 foreach (var deltagare in tävling.AllaDeltagarna)

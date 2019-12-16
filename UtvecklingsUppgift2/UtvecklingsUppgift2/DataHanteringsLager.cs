@@ -35,7 +35,7 @@ namespace UtvecklingsUppgift2
 
                     //a new list is created for all the participants it will be filled with all the participants that competed in that Tävling.
                     List<Deltagare> Participants = new List<Deltagare>();
-                    SqlCommand cmdDeltagare = new SqlCommand("SELECT * from Deltagares WHERE TävlingsId = " + tävling.ID, connection);
+                    SqlCommand cmdDeltagare = new SqlCommand("SELECT * from Deltagare WHERE TävlingsID = " + tävling.ID, connection);
                     SqlDataAdapter daDeltagare = new SqlDataAdapter(cmdDeltagare);
                     var deltagreTable = new DataTable();
                     daDeltagare.Fill(deltagreTable);
@@ -80,7 +80,7 @@ namespace UtvecklingsUppgift2
 
                     //a new list is created for all the participants it will be filled with all the participants that competed in that Tävling.
                     List<Deltagare> Participants = new List<Deltagare>();
-                    SqlCommand cmdDeltagare = new SqlCommand("SELECT * from Deltagares WHERE TävlingsId = " + tävling.ID, connection);
+                    SqlCommand cmdDeltagare = new SqlCommand("SELECT * from Deltagare WHERE TävlingsID = " + tävling.ID, connection);
                     SqlDataAdapter daDeltagare = new SqlDataAdapter(cmdDeltagare);
                     var deltagreTable = new DataTable();
                     daDeltagare.Fill(deltagreTable);
