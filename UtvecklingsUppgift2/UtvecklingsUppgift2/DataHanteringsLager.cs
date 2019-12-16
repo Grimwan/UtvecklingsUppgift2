@@ -24,7 +24,7 @@ namespace UtvecklingsUppgift2
                 //save all the data into a  DataTable.
                 daTävling.Fill(tävlingsTable);
 
-                List<Tävling> Competitons = new List<Tävling>();
+                List<Tävling> competitons = new List<Tävling>();
 
                 //iterates each row in the tävlingsTable and copys all the relevant information to a newly created Tävlings object and then Adds that object to the list. 
                 foreach (DataRow row in tävlingsTable.Rows)
@@ -45,16 +45,16 @@ namespace UtvecklingsUppgift2
                         Deltagare deltagare = new Deltagare();
                         deltagare.Namn = InternalRow["Namn"].ToString();
                         deltagare.Tävling = tävling;
-                        deltagare.TävlingsId = Int32.Parse(InternalRow["TävlingsId"].ToString());
+                        deltagare.TävlingsID = Int32.Parse(InternalRow["TävlingsID"].ToString());
                         deltagare.ID = Int32.Parse(InternalRow["ID"].ToString());
                         Participants.Add(deltagare);
                     }
-                    tävling.Alladeltagarna = Participants;
+                    tävling.AllaDeltagarna = Participants;
 
-                    Competitons.Add(tävling);
+                    competitons.Add(tävling);
                 }
                 //returns a list with Tävlingar and what competitors that participated in each tävling.
-                return Competitons;
+                return competitons;
             }
         }
         public Tävling GetTävling(int ID)
@@ -89,11 +89,11 @@ namespace UtvecklingsUppgift2
                         Deltagare deltagare = new Deltagare();
                         deltagare.Namn = InternalRow["Namn"].ToString();
                         deltagare.Tävling = tävling;
-                        deltagare.TävlingsId = Int32.Parse(InternalRow["TävlingsId"].ToString());
+                        deltagare.TävlingsID = Int32.Parse(InternalRow["TävlingsID"].ToString());
                         deltagare.ID = Int32.Parse(InternalRow["ID"].ToString());
                         Participants.Add(deltagare);
                     }
-                    tävling.Alladeltagarna = Participants;
+                    tävling.AllaDeltagarna = Participants;
                 }
                 //returns Tävling and what competitors that participated in that Tävling.
                 return tävling;

@@ -10,7 +10,7 @@ namespace UtvecklingsUppgift2
     {
         public int ID { get; set; }
         public string Namn { get; set; }
-        public int TävlingsId { get; set; }
+        public int TävlingsID { get; set; }
         public Tävling Tävling { get; set; }
     }
 }

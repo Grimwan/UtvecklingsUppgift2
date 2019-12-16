@@ -10,6 +10,6 @@ namespace UtvecklingsUppgift2
     {
         public int ID { get; set; }
         public string Namn { get; set; }
-        public List<Deltagare> Alladeltagarna { get; set; }
+        public List<Deltagare> AllaDeltagarna { get; set; }
     }
 }
