@@ -11,7 +11,8 @@ namespace UtvecklingsUppgift2
     {
         static void Main(string[] args)
         {
-            DataHanteringsLager lager = new DataHanteringsLager();         
+            DataHanteringsLager lager = new DataHanteringsLager();
+
             foreach (var tävling in lager.GetAllTävlingar())
             {
                 Console.WriteLine("Tävlings namn: " + tävling.Namn);
